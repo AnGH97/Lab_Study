@@ -1,0 +1,23 @@
+공격이 있을 때 방어 할 수 있는 trajectory가 따로 있는게 아니고 공격이 발생 했을 때 trajectory
+step1. 시간과 공간 값을 얼마나 정교하게 사용하느냐에 따라 standard trajectory를 잘 구성했을 때
+나중에 공격이 발생 했을 때 탐지 할 수 있게 구성이 되어야 한다.
+정상적인 trajectory가 마련이 되었으면 trajectory에서 뭘 파악 할 수 있냐, trajectory를 어떻게 만드느냐
+BS까지 전달되는 data가 가는 상황을 시간에 따라 표현 한것
+무조건 자세하게 할 수는 없음. 내용을 다 넣는것은 말이 안됨. 필요없는 정보가 있을 수 있음
+자세하다는 표현은 애매하다. trajectory=>공격이 발생했을 때 변화 할 수 있는 데이터들,
+목적에 따라 달라지는 것임 trajectory는!!
+보안에 필요한 정보들 또는 지식들만 가지고 있으면 되는 것
+그것들을 활용해서 trajectory를 디자인을 해야하는 것!!
+디자인 하는 사람이 trajectory를 만들어 나가는 것임
+보안성을 향상 시킬 수 있는 event들은(동적인 것, data랑 차이는 동적인 부분)을 담고 있어야 하는 것
+시간 값과 공간 값을 동시에 말하는 것.
+공격이 있었는데 현재 trajectory는 탐지가 안됨=>trajectory를 개선해야 하는 것!!
+
+각도를 다른 방법으로 찾을 수 있음 standard trajectory는 비정상을 밝혀낼 수 있는 기준
+이게 빗나갔다고 다 공격이라고 생각 할 수는 없음
+step2. 공격 trajectory도 있으면 좋음 확장적으로 이건 이런 공격이다라고 확정 지을 수 있는 trajectory가 있으면 더 좋음
+그럼 false negative나 false positive를 줄일 수 있음.
+
+trajectory를 어떻게 표현 할 것인가에 대한 timing diagram을 rule로 표시 할 것!!=>temporal logic과 유사한 rule
+rule로 표현만 하면 환경은 구현이 되어 있으므로 devs model같은 것!!
+

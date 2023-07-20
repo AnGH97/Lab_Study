@@ -1,0 +1,52 @@
+시간적: 입력이 들어오는 시점과 출력이 나가는 시점은 속일 수 없음
+공간적: 출력 내용은 속일 수 있음, 입력 내용은 속일 수 없음
+
+Compromise 되는 과정에서 찾는다
+
+CH node가 Forwarding node의 역할도 하는 경우 Trajectory 사용:
+26, 27p: 첫번째 센싱 보고서가 input된 시점을 기준으로 R 보고서가 output되는 시점의 시간을 정상 Trajectory와 비교하여
+                 정상 Trajectory 보다 시간이 오래 걸렸다면 output의 내용을 확인하고 공격이 o(CH)
+28p: 첫번째 센싱 보고서가 input된 시점을 기준으로 R 보고서가 output된는 시점의 시간을 정상 Trajectory와 비교하였을 때
+          차이가 없다면 R 보고서가 output된 시점을 기준으로 K(t)c가 output 되는 시점의 시간을 정상 Trajectory와 비교하여
+          정상 Trajectory보다 시간이 오래 걸렸다면 공격이 o(CH)
+          
+29p: 26, 27p와 같은 방식으로 공격이 존재하는지 확인한 뒤에, 오류가 있다면 OK message K(t)가 출력 되는 시간을 확인하고
+         정상 Trajectory 보다 시간이 오래 걸렸다면 공격이 o(FW)
+
+30p: 26p,27p와 같은 방식으로 공격이 존재하는지 확인한 뒤에, 오류가 있다면 이후 R1f, R2f, R3f가 입력된 시점을 기준으로 
+       R1f, R2f, R3f가 출력되는 시점의 시간을 정상 Trajectory와 비교하여 차이가 있다면 공격이 o(CH+FW)
+
+
+1. 센서 노드에서 첫번째 센싱 보고서가 input된 시점을 기준으로 R1c,R2c,R3c 보고서가 output되는 시점의 시간을 확인하여
+정상 Trajectory의 시간과 비교
+2. 1번에서 오류가 없다면, OK message가 출력된 시점을 기준으로 K(t) message가 출력되는 시점의 시간을 확인하여
+정상 Trajectory의 시간과 비교
+
+1번과 2번이 모두 정상이라면 공격 x
+1번 혹은 2번이 정상 Trajectory와 다르다면 공격이 o
+
+Forwarding node compromise 탐지
+R1, R2, R3 message가 전 forwarding node에서 들어온 이후로 이 메시지가 다음 노드로 전달 되는 시간이
+정상 Trajectory의 시간과 비교하였을 때 다르다면 공격이 o
+
+
+CH node + Forwarding node:
+여기서 Forwarding node의 역할을 하는 경우 R1, R2, R3를 재생성 할 때 
+CH node의 역할을 하지 않는 그냥 Forwarding node의 경우 키 복제 과정이 또 발생하기 때문에 R1, R2, R3가 input으로
+들어왔을 때 output이 나오는 시간이 다르다.
+	
+Timing diagram에 공격이 발생한 부분에 정상 Trajectory를 표현할 때 시점을 delta로 표현할것(간격을 표시하는 부분이기 때문에)
+
+
+
+
+
+
+BM-Devs, Temporal logic 논문 다시 읽어볼 것!
+Expert system 책에 나와있는 부분 봤음
+그것과 연구에서 사용했던 rule은 다름
+그것과 같이 BM-Devs, Temporal logic 논문을 참고해서
+내 논문에 맞는 rule을 생성해야함(Expert systems에서 했던 것처럼)
+
+
+성능 표현에 대한 부분에 대해서 고민해 볼것!

@@ -1,0 +1,57 @@
+1. Zookeeper
+입력: working memory에 존재하는 assertion(사실)과 rule
+문제 풀이 방법: forward chaining
+결과: 원하는 추론 값
+
+-conflict resoultion 방법: rule ordering(같은 rule이 두 개 이상 trigger 되는 경우 rule의 번호가 큰 것을 선택한다)
+
+->Bagger를 대입하는 경우 
+conflict resoluton 방법이 다르기 때문에 대입할 수 없다. zookeeper 알고리즘에 Bagger의 rule을 대입할 경우
+B1->B2->B3->B4->B6->B7->B9->B8(3번 실행)->B10->B12->B11->B13->종료 이 순서가 아닌
+B2->B1이런식으로 실행되기 때문에 실행이 불가능 하다.
+
+
+2. Bagger
+입력: working memory에 가방에 넣을 항목에 대한 정보, 4단계로 구성된 단계를 식별하는 assertion이 필요함
+문제 풀이 방법: forward chaining
+결과: rule 종료(단계 종료)
+
+-Bagger rule중에서 initiate state에 존재하는 assertion중 check-order step일때 rule이 trigger됨
+-step is check order일 때 trigger 가능한 rule은 B1, B2 두 가지가 존재함. 
+-이때 specifity ordering conflict resolution을 사용해서 B1과 B2중 working memory에 존재하는 assertion과 rule에 존재하는 조건이 
+가장 많이 매칭되는 B1을 선택
+-then 추론값 확인
+-추론 값이 goal state(여기서는 단계 종료)인지 확인=>x
+-working memory state 변경
+-이때 변경된 working memory state에서 step에 대한 부분은 변경 되지 않았음, 따라서 B1, B2 trigger 가능. 
+-B2 실행
+-B2에서 then은 delet-add로 표현되어 있음, 추론값 확인
+-이때 추론값이 goal state인지 확인=>x
+-working memory state 변경
+.
+.
+.
+B1->B2->B3->B4->(B5는 실행 되지 않음/6개 이하이기 때문에)->B6->B7->B9->B8(3번 실행)->B10->B12->B11->B13->종료
+
+->Zookeeper를 대입할 경우
+conflict resolution 방법이 다르기 때문에 대입할 수 없다. Bagger의 알고리즘에 Zookeeper의 rule을 대입할 경우
+Bagger 알고리즘은 spepcifity ordering 방법으로 conflict resolution을 해결하기 때문에 goal rule을 제외한 나머지 rule 중에서
+goal rule 보다 woring memory state의 asssertion과 매칭되는 조건이 많을 경우 무한 루프에 걸릴 수 있기 때문에 사용할 수 없다. 
+
+
+Deduction system은 참으로 밝혀진 것이 거짓이 될 수 없는 
+정적인 세계를  다룬다고 가정합니다. 반응 시스템 그러나 더 많은 자유가 허용됩니다. 때로 그 추가 자유는 then으로 표시된 
+규칙의 작업 부분을 삭제 및 추가로 표시된 두 개의 구성 부분으로 분리하여 규칙 구문에 반영됩니다. 
+
+binary search
+입력: 정렬된 리스트
+문제 풀이 방법: binary search
+결과: 원하는 값
+
+중간값을 선택해서 작은 값은 왼쪽으로 큰 값은 오른쪽으로
+이후 찾는 값이 중간 값보다 큰 경우 왼쪽은 신경쓰지 않고(상관 없음) 오른쪽에서 다시 중간값을 선택하여
+원하는 값이 나올 때까지 반복
+
+만약 정렬 되지 않은 리스트를 binary search에 대입할 경우
+중간값을 선택해서 작은값을 왼쪽으로 큰값을 오른쪽으로 했을 때
+정렬이 되지 않았기 때문에 우리가 찾는 값이 왼쪽이 있을 확률이 있으므로 왼쪽을 신경 쓰지 않을 수 없음

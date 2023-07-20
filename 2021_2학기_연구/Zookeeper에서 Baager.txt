@@ -1,0 +1,14 @@
+Zookeeper의 정보를 Bagger에 대입한 경우
+
+1. working memory는 Bag에 넣을 항목에 대한 정보를 캡처하는 assertion을 포함해야 한다. 이러한 항목이 다음 표에 나열된 항목이라고 가정한다.
+
+-Stretch has hair 
+-Stretch chews cud
+-Stretch has long legs
+-Stretch has a long neck
+-Stretch has tawny color
+-Stretch has dark spots
+
+Zookeeper는 현재 단계에 대한 부분을 고려할 필요가 없음, 즉, 단계에 대한 체크 오더가 필요하지 않음.
+또한 사용자에게 추천할 필요가 없음.
+

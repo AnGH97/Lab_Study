@@ -1,0 +1,57 @@
+목표!
+-우선은 소위 말하는 temporal operator 
+지금 말한 operator를 이해하고, 그 operator로 구성된 논리 식이 생김
+논리 식은 기존에 알던 implication+새로안 temporal operator 식을 이해할 수 있으면 됨
+나중에 필요하면 본인이 논리식이 결국은 모델링, 어떤 상황을 식으로 표현할 수 있으면 됨
+
+만약 현재 이렇고 next moment에는 이렇고 등등 이면은 이렇게 하라
+expert system에서 rule 모델링 하고 사용했음
+그런식으로 temporal operator를 이용해서 모델링 하는 것이 목표!
+
+knowledge가 있으면 temporal operator로 모델링 할 수 있으면 되는 것!
+rule만 표현할 수 있으면 됨 temporal operator로
+
+OO=>next next
+OOO=>next next next
+
+◇someday
+□always	지금부터 모든 미래에 항상 어떤게 사실이다,
+◇□	지금 당장은 아니지만 미래의 어느 순간에 사실이다.
+연구하다 보면은 답이 없는 것도 이해할 수 있음
+
+temporal logic 
+trajectory 정보를 이용한다.
+trajectory 
+-trajectory는 다른게 아니고 temporal logic에서 표현한 내용
+시간이 흐르면서 일어난 일련의 사건
+simulation 에서 timing diagram 그게 trajectory임
+trajectory가 여러개 있는데 input trajectory output trajectory, system trajectory
+
+그걸 temporal logic으로 표현할 수 있음 (trajectory를)
+지식을 활용함 until 하다보면 자연스럽게 사용할 일이 생김, 보안상에서 일어나는 일을 설명하려면
+
+어느 한 시점에서 동시에 일어나는 일
+temporal logic을 쓴다는건 trajectory 
+시작에는 이게 참이고, 3초 뒤에는 어떤게 참이고, 또 다음 어떤 순간에는 참이고, 
+보안 도메인을 들여다 보면 그런 정보를 이용하다보면 knowledge를 자연스럽게 표현할 수 있음.
+
+temporal logic 이해 자체 보다는 temporal logic을 모델링을 해야하는데 어떤 내용을 모델링 하는가
+어떤 내용을 찾는게 연구에 주요 내용이 됨.
+
+temporal operator 5개에 대한 내용이 어느정도 이해 됬다고 생각이 되면 교수님 논문을 읽으면 됨!
+그게 최종 연구 목표임!
+
+Devs로 표현해서 model 내에서 수행을 하고 학과목에서 배운 내용은 기본적으로 구현은 해야하고
+거기에 temporal logic이 추가 된다고 생각하면 됨. 
+이번에 oop대신에 model로 구현한다고 생각하면 됨.
+
+이번 연구에는 그러한 개선이 있고, 이전에 expert system을 통해 rule을 구축 했는데 그걸 temporal logic을 사용해서 할것임!
+expert system은 rule로만 존재하고, 
+
+환경이 있으니깐 구현 하기만 하면 됨.
+
+-저번주에 알려준 논문을 구현 하도록 선배님이 구현을 시켜 놓음.
+rule에 시간이 있으니깐 inference engine이 뭔지 잘 알고 있음 
+그 inference engine이 일반적인게 아니라 시공간 inference engine이 필요한것임(temporal logic 때문에 시간이 추가 된거임)
+
+-temporal operator에 대한 이해도를 높이고, 교수님 논문 읽기!

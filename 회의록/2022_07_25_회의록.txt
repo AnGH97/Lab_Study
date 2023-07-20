@@ -1,0 +1,52 @@
+12번 페이지와 13번 페이지를 비교한 결과
+: 공격이 발생한 CH node의 trajectory와 CH node가 정상 forwarding node의 역할을 하는 경우 CH node에 공격이 발생하였을 때 
+Trajectory와 정상 CH node의 Trajectory 시간보다는 길어지지만 CH node가 정상적인 forwarding node의 역할을 하는 경우보다는
+ 짧은 것을 알 수 있다.
+=============================================================================================================
+
+IoT=>인터넷으로 연결된 모든 물체들
+
+Forwarding node = CoS 노드가 맞음
+
+X, Y에 센서 노드를 표현해서 그릴 것!!
+S를 최소한 두개의 형태로 그릴 수 있는 것!
+S에 두 가지 timing diagram을 그릴 것!! 두가지를 같이 놓고 그리면 파악을 하기에 훨씬 편함!!
+state trajectory에 두가지를 모두 표현해서 그릴 것!!
+문제가 어디서 발생을 했는가?=>메시지를 만드는 중에 forwarding을 같이 하는 중에 compromise가 되고 그럴 때 탐지하는 경우가
+하나 있었음!! 그게 제일 좋은 형태의 방어 형태의 예임!!
+두 개의 기능을 하는 중에 forwarding 하는 중에 attack이 왔다면 => 그게 가장 효과가 좋은 연구가 됨!
+case가 forwarding도 하고 메시지도 만들고 하는 그 과정에서 compromise가 들어 온다면 탐색할 수 있다.
+
+CoS가 forwarding하는 중에 compromise가 되었으니깐 탐지할 수 있다.=> CoS만 forwarding을 하는게 아니다
+forwarding하는 중에 CoS 역할이 되려면 메시지를 만들어서 보내는 역할을 하기 때문에 CoS가 forwarding하는 경우에 탐지할 수 
+있는 경우에 
+1. 메시지를 만드는 경우
+2. forwarding하는 경우
+
+CoS가 forwarding을 한다.
+일반 노드가 forwarding을 한다면 넘어올 필요가 없었다.
+CoS하고 일반 노드하고의 차이가 무엇인가? => 일반 노드는 센싱을 해서 메시지를 생성하는 하나의 역할을 하는것
+CoS는 최종적으로 일반 노드들에게 메시지를 받아서 최종적 메시지를 생성하는 것
+CoS가 forwarding한다는 것은 CoS가 멤버들을 통해서 메시지를 형성을 하는 중에 forwarding 한다.
+그렇다는 얘기는 두가지 1, 2가 필요하다는 얘기
+두 가지가 동시에 일어나는데 compromise가 시도가 되었다. 그걸 trajectory정보로 탐지할 수 있기 때문에 여기로 넘어온것
+
+같은 노드의 state이다. 
+S시간에 흐름에 따라 state를 합쳐야 되는 것임!!
+CoS 노드가 forwarding 노드가 같은 것이기 때문에 state가 합쳐져야 함!!
+
+합성하는 것은 기존에 있는 timing diagram을 합쳐서 그려야 함!!
+
+하나만 있으면 내용에 다양성이 부족하니깐 조금 더 찾아 볼것!!
+개별적으로 Trajectory를 detect하는 Trajectory를 찾아 볼 수 있으면
+CH node, Forwarding node, CH node+forwarding node 총 3가지의 Trajectory를 만들어 내서 
+
+메시지를 형성하는 것과 메시지를 전달하는 것을 따로 따로 timing diagram을 정리 할 것!!
+2가지 기능을 수행 할 때 탐지형 Trajectory를 형성이 가능할 것 같다.
+CoS 역할을 하는 것과 Forwarding을 하는 경우 각각의 경우에 대해서도 탐지를 위한 Trajectory형성이 가능 할 것 같다.
+Compromise 한다는 것을 detect한다는 것 자체가 수준이 높은 연구임. 다른 논문들 읽을 때 DEFS SEF도 그렇고 
+방어하는 논문도 좀 읽음, Compromise를 detect 한다는 것이 매우 어려운거임
+대부분 침해 당한 뒤에 잡에 내는 것임, Compromise인 경우라고 정했는데
+또 다른 연구 방향은 기존 프로토콜로 못잡는 공격 어떤 공격이 존재 할 것. 그게 지금 compromise되는 과정임
+
+졸업하기 전에 결과를 받기는 쉽지 않은 것. 

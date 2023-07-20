@@ -1,0 +1,44 @@
+전체 structure가 먼저 나와야 함.
+SES 먼저 완성하고 하도록 해야한다. 
+SES 디자인 먼저 그리고 할 것!=>이건 어떻게 하는걸까?
+
+classnote 다시 한번 확인 할것
+1. SES 디자인 먼저 끝내고
+
+ atomic model modelling 
+
+1. 대상 구조를 SES 트리 구조로 나타냄=>atomic model과 coupled model로 구성된 구조로 나타낸다. 
+2. coupled model과 atomic model이 결정되면
+3. timing diagram과 model diagram을 나타내고(기능을 정리하고 atomic model과 coupled model)
+4. atomic model modelling을 진행한다.
+5. coupling 정보를 등록하고
+6. simulation을 실행해서 각각 모델별로 message가 잘 들어가는지 확인한다.=>star message, done message x,y message 확인 하는것
+모델별로 상태 전이가 제대로 실행되는지 확인하기 위해(이건 atomic model)
+atomic model testing 하고 coupling model testing 한다.(atomic model 먼저 하고, coupled model 진행 한다.)
+7. SES를 pruning 하여 PES로 확정을 짓고 실험을 해서 성능 평가를 해야 한다.
+(pruning의 의미: 복잡도를 줄인다)
+8. 논문을 쓴다.
+
+xml이 워드로 사용할 수 없는 이유: format이 맞지 않음 input
+SES-Editor를 통해서 나온 xml만이 사용 할 수 있음.
+xml에는 coupling 구조랑, 모델의 관계를 다 갖고 있음, 여기서 transform이 일어나게 되는데
+transformation: 최종적으로 coupled model을 만들기 위한 것으로 최상위 모델부터 만들기 위해 그 안에 구조를 이용해서
+하위 모델을 만들어 주면서 트리 구조를 만들어 주면서 coupled model을 만들어 주는 것임 
+xml을 통해 바이너리 트리로 나타내고 그것을 통해서 최종적으로 coupled model을 만들어 주는 것임.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. 실세계의 대상 구조를 SES 트리 구조를 SES editor(그림을, 기록)를 통해 나타낸다(그려서 남기는게 중요 한것).
+2. 전체 couled model의 모델 다이어그램을 작성
+3. atomic model 모델 다이어 그램 작성(모델, 타이밍, 상태)
+4. atomic model modeling을 하고 test 과정을 진행
+5. SES를 pruning 하여 coupled model을 확정 짓고
+6. coupled model test 과정을 진행하고(구조적으로 coupling이 잘 되었는지 확인 하는 것)
+7. simulation을 실행하여 성능평가를 한다.(내가 얻고자 하는 결과를 평가하는 것), 성능 평가를 할 때는 한번만 실행하는 것이 아니라
+실험을 할 때 여러번 실행하여 그에 대한 평균을 내어서 그래프를 그린다.
+8. 논문 작성
+(이게 정답)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+BM_DEVS를 사용하기 때문에 AI 적인 요소가 잘 들어가는 것임
+BM_DEVS는 coupled model 임=>그러려면 rule을 작성해야 함!

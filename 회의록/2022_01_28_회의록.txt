@@ -1,0 +1,81 @@
+궁금한 것
+1. multi component model이 coupled model이고(O), component model, basic model은 atomic model로 이해하면 되는가?
+-basic model, component model, atomic model
+component model은 multi component model과 구분 짓기 위해서 사용한 것임! 연결된 개념으로 
+component model을 atomic model과 basic model로 표현한 것임! atomic model이라고 말하면 DEVS 개념과 가까워진것임!
+atomic model은 basic model임, basic model은 atomic model이 아님.
+basic model 은 component model의 이론적 바탕 behavior만 나타내는 것을 basic model이라고 함.
+
+물질, system 이 구성되어 있다 그러면 사람들의 관심사는 무엇을 하는가?가 궁금한 것임! 행동에 관한 것!
+사람한테 보이는 것은 동적인것! 조금 더 자세하게 이해하려면 해부학 적으로 어떤 절차를 거쳐서 만드는가, 요소들이 있는가
+어떤 공정들이 있을까 구조랑 관련된것도 있고, 동적인 것에서 구조적으로 이해하게 됨! 
+DNA, RNA가 있으면 그게 어떤 영향을 주느냐 그게 궁금한 것임!
+그걸 이해하기 위해서는 DNA 맵 그게 어떤 요소들로 이루어져 있나임
+동적인것과 정적인 구조로 이해를 하게 됨!
+그걸 이해하면 동적인거 이해하고, 동적인 특성을 만들어 내기 위한 구조를 이해하고 그 구조를 이해하기 위해서는 다시 동적인 걸 이해해야함
+그중에 하나가 더 작은 동적인걸 이해해야함! (recursive)
+
+그렇게 쭈욱 바닥으로 가다보면 동적인 것임! 더이상 구조를 알 수 없는 상태가 오게 됨! 어떤 시스템이던 간에!
+결국 현상만 보이게 되는 것! 눈에 보이는 건 동적인 것임! 
+젤 마지막에 있는게 atomic model임! 
+basic model은 atomic model을 포함하지만 반대는 참이 아니다.
+
+atomic model을 구현 하려면 프로그래밍을 해야함! 
+그런것들로 표현 되는게 atomic model임 그런 atomic model을 만들어서 동적을 표현하는 것! 그게 바로 basic model임!
+왜 다르다고 얘기 하나면 처음에는 동적인 특성이 젤 아래 있고 중간에 어떤 모델이 있다면 상위는 component 위에서는 parent model
+부모 입장에서 보면은 behavior만 보이고, 그 요소들은 behavior들이기 때문에 동적 특성으로는 표현 해야 하기 때문에 그걸 basic model임!
+중간에 있으면 coupled model 중 하나가 basic model 중 하나라는 것
+
+그 behavior를 담고 있는 coupled model 도 되었다가 basic model도 되었다가 할 수 있음!!
+structure 도 있고(coupled model) behavior(basic model)도 있고
+
+coupled model에서 behavior를 정의하지 않은 이유! 
+system이 자동으로 변환을 해줌! atomic model behavior를 제공하고, 중간에 coupled model을 정의를 해주면 
+중간 단계에 관련된 behavior는 자동으로 생성 됨!
+그 context에 맞게 어떤때는 basic model이라는 용어를 써야지만 상황에 대한 설명이 가능 한거고, 어떠한 상황에선 atomic model을 사용해야
+알맞은 context가 되는 것임! atomic model과 basic model은 완전히 다른 관점에서 설명할 때 사용해야함!!
+
+2. NBM-DEVS 내부에 IEBM-DEVS가 존재하고 그걸 통해 TLBM-DEVS의 규칙을 실행하게 되는건가?
+NBM-DEVS 이론(coupled model을 정의하기 위한 BM-DEVS임)이 BM-DEVS임 그게 정립이 되려면 기존의 DEVS 모델에 
+coupled model이 달르고 atomic model은 같음!
+N은 coupled model을 표현한 것임!
+atomic model을 M으로 표현함!
+
+TL temperol logic 이라는 이론이 원래 있음 논문에 있는 temporal logic이라고 하면 근본적으로 다른게 있음!
+다르니깐 구분하기 위해서 TL과 일반적인 TL과 다르니깐 (이건 그냥 규칙) 이것에 큰 특징은 그 rule의 argument 
+그 argument가 simulation model임! 현재는 component model, children model임! 
+
+IEBM-DEVS inference engine 그거하고 어떤 한순간에 rule이 결정되는게 아니고, 기존에 IE는 어느 한 순간에, 시간에 그냥 바로
+trigger가 되었는가 안되었는가 결정이 됨
+IEBM-DEVS에서는 시간이 흐르면서 결정이 됨! 
+현재, 그다음에, 또 그다음에 참이여야 그 rule이 trigger가 되는거임!
+그게 이제 conventional 한 ie와 ie-BM DEVS의 차이임!
+IE의 실행이 simulation이 진행하는 과정에서 결정이 됨! 왜냐하면 rule의 argument가 simulation model 이기 때문에 그게 결정이 되려면
+simulation이 진행이 되어야 함! simulation 이 진행하는과정에서 평가가 됨!!
+시간이 지나면서 평가가 되어야 한다 그러므로 rule에 TL이 포함 되어야 함!
+
+TLBM-DEVS가 바로 trajectory임! 그 trajectory를 표현을 한게 TLBM-DEVS 임!
+다시 말하면 trajectory를 TLBM-DEVS라고 표현 한 것임!!
+model state가 어떻게 변하는 가model 관점에서 보면 model state trajectory!
+
+model을 완성하기 위해서는 TLBM-DEVS를 어떻게 구성하고 어떻게 실행하면 어떤 결과가 나온다 그런것만 알면 됨!
+그걸 실행하기 위해서 내부 inference engine에 대한 부분은 rule이 불확실한 상황에서 이해하면 되고!
+그냥 rule을 이런식으로 구성하면 이런 결과가 나오겠구나 알면 IE에 관련된 부분은 정확하게 알 필요는 없음!
+시스템이 있으면 데이터 부분만 활용하면 되지 control은 소스 코드를 알 필요는 없음!
+데이터 부분만 건들인 것! 
+모델 구성은 데이터에 해당 하는거, 컨트롤은 시뮬레이터 내부임!! 
+
+공격과 방어가 선정이 되면 trajectory를 사용해서 방어 할 수 있는 해결할 수 있는 절차에 대해서 생각하면 그게 목표임!!
+문제 도출->rule적용해서 마무리 하는데 rule에 시간을 포함 시켜서 도출 하고, 그 성격(TL)에 맞게 사용하면 됨!
+TL을 활용하기 위해서는 알고 있는 내용을 잘 활용하는게 중요!
+공격자 입장, 방어자 입장에서 변형하는 방식으로 생각해 보는게 좋을것!
+방어는 생각을 할 때 trajectory를 활용한 여지를 찾으면 됨!!
+생각이 정리가 안되면 CCTV를 떠올리면 됨!! 너무 일반적인 것!! 그것을 통해 많은 일을 해결하기 때문에 굉장히 많이 나올 수 밖에 없음!!
+그 전에 그걸 하기 위해서는 단계를 생각 해 보면 이전에 도출했던 것을 기준으로 새로운 도출을 만들어 내는 것이 중요!
+그 때는 trajecoty와 독립적으로 생각해서 연결을 하면 됨! 
+성격을 아니깐 단계 단계적으로 생각을 하면 rule 적용해서 표현하는게 난해한 문제가 아님!
+마찮가지로 목표를 한번에 갈 생각을 하지 말구 단계적으로 어떻게 갈지 생각해서 올라가는게 중요!
+난이도가 높은 연구를 할 때는 디자인이 중요한 거임!! 그게 다임!! 
+소프트웨어 시스템이 어려운 문제를 해결하는 소프트웨어 시스템을 생각하면 코딩보다 디자인이 더 중요해짐!!
+
+디자인이 젤 중요함!!! 그래서 지식이 많이 필요한것!!

@@ -1,0 +1,28 @@
+forward chaining 은 문제풀이 방법 knowledge는 대상 
+graph가 바뀌었기 때문에 DFS가 안된다라고 설명한것과 같은것 
+
+문제풀이 방법과 문제풀이 대상 구분
+대상은 sorted하고 unsorted, 입력이 달라진다고 문제풀이 방법이 달라지는 것은 아님.
+
+입력, 출력, 문제풀이 방법에 대해서 정확하게 구분을 해야함!!
+그것을 염두해두고 시험을 해봐야함!!!! 
+연결을 못시킴 논리적 gap을 이해 할려고 노력해야함 
+논리적인 gap을 매우려고 노력해봐야함!!
+
+세가지가 틀이 안잡혀서 그런것! 어떤것이 입력이고: 입력은 대상 문제, 풀이 방법, 결과
+풀이 방법이 정확하게 이해하지 못했음.
+
+문제풀이 방법: forward chaining. 입력: working memory에 존재하는 assertion과 rule, 결과: 추론 값
+
+Zookeeper의 forward chaining을 Bagger에 대입해보고
+Bagger의 forward chaining을 Zookeepr에 대입해보라는 의미.
+
+추상적으로 말하는 것이 아니라 명확한 결과 값이 나와야 함. binary search 처럼 명확하게 결과 값이 나와야함
+추상화를 할려며 추상화에 대한 정확한 정보를 알아야함.
+뭔가 잘 모르는데 이걸 정리해서 얘기 할려하면 불가능함
+
+이해가 필요함!!! 
+
+
+규칙의 모든 if pattern이 충족될 된걸 규칙이 tirgger 되었다라고 하고, trigger 된 규칙이 새로운 assertion을 설정하거나 작업을
+수행 하는 걸 fire(실행)이라고 한다.

@@ -1,0 +1,8 @@
+knowledge base와 inferencing engine을 분리하는 것 이유: 목적이 다르기 때문에 
+나누는 기준은 같음 기준이 되는 것은 무엇인가? 
+knowlege는 수동적이고, ineferencing 능동적임
+null 입력 
+동적인것과 정적인것을 구분해서 일반적으로 소프트웨어를 디자인 함.
+data 부분이냐, control 부분이냐.
+
+data와 control을 분리한 이유는 그래야 knowledge base를 구현할 수 있음

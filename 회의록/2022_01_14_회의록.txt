@@ -1,0 +1,29 @@
+지금부터는 난이도가 있는 연구가 시작됨
+
+지식이 많이 필요한 연구
+expert system, IoT, WSN
+3학기 시작
+1년 지났으니깐 지금부터 재밌는 연구 연구다운 연구
+Intelligence를 느낌으로 접하기는 했으니까
+
+교수님이 작성한 논문
+
+
+간단한 논문 설명
+-기본적으로 rule based system(expert system 같은것) 그걸 base로 해서 
+한가지 기초가 더 필요한게 temperal logic이라는 학문이 있음 
+내가 아는 logic system은 expert system에서 rule이라는 logic임
+그런 system임 rule이 다른게 아니고 implication operator를 사용하는 logic이라고 생각하고 그게 
+less formal하게 표현한것 그런 implication operator를 사용하는데 시간 개념이 추가 된게 temperal logic 시간적인 logic
+지금 알고있는 rule에 시간 개념을 추가한것. 지금 이거는 true 이고 1시간 뒤에 저것도 true이고 쭉쭉 이렇게 진행 될때 마지막 시간에
+결론을 내라 이런 의미
+-temperal logic을 먼저 공부할것! 
+연구실에 있는 책 몇쪽까지 읽어보라 한 부분(표시 되어 있음)
+그 책을 먼저 읽고 그걸 이해하려면 expert system 같은 지식이 필요한것!
+이해하고나면 찾은 논문을 이해하면 바로 연구를 시작하면 됨
+-temperal logic 형태의 knowledge를 시뮬레이션하고 접목시켜서 하는 연구가 찾은 논문임
+그걸 이해하고 나면 지금까지 연구했던 IoT 관련된 rule을 temperal logic으로 변경 해서 하면 됨.
+기존에 있는 non-temperal한 rule을 temperal하게 바꾸면 되고 시간적 개념이 들어가야 하니깐 시간적 정보가 rule형성에 도움이 
+될만한 것을 찾으면 연구 하나가 완성 되는 것.
+
+-당장 해야할것은 책 읽고, 논문 읽고 그게 우선임.
